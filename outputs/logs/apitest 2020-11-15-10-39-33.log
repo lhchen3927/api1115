@@ -1,0 +1,591 @@
+2020-11-15 10:39:33,513 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:33,513 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['phone']
+2020-11-15 10:39:33,769 apitest INFO handle_db.py [第28行] 查询个数0
+2020-11-15 10:39:33,770 apitest INFO handle_data.py [第95行] 如果有手机号需要未注册的，调用函数生成新的未注册过手机号,将新生成的手机号设置成Data类属性
+2020-11-15 10:39:33,770 apitest INFO handle_data.py [第99行] 替换#phone#,替换后phone值为：17714071496
+2020-11-15 10:39:33,776 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 1, 'title': '前置条件-注册管理员', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"17714071496","pwd":"123456789","type":0,"reg_name":"qianyu"}', 'extract': '{"admin":"$..mobile_phone"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:33,776 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:33,776 apitest INFO handle_requests.py [第13行] 请求方法为：post
+2020-11-15 10:39:33,776 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2'}
+2020-11-15 10:39:33,777 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'mobile_phone': '17714071496', 'pwd': '123456789', 'type': 0, 'reg_name': 'qianyu'}
+2020-11-15 10:39:33,777 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/register
+2020-11-15 10:39:33,895 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:33,896 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'reg_name': 'qianyu', 'mobile_phone': '17714071496'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:33,898 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:33,898 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['admin']
+2020-11-15 10:39:33,898 apitest INFO handle_data.py [第99行] 替换#admin#,替换后admin值为：17714071496
+2020-11-15 10:39:33,898 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 2, 'title': '前置条件-登录', 'method': 'POST', 'url': 'member/login', 'request_data': '{"mobile_phone":"17714071496","pwd":"123456789"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:33,899 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:33,899 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:33,899 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2'}
+2020-11-15 10:39:33,899 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'mobile_phone': '17714071496', 'pwd': '123456789'}
+2020-11-15 10:39:33,899 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/login
+2020-11-15 10:39:34,016 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,016 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': 0.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-11-15 10:44:28', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,017 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,018 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:34,018 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:34,018 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 3, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,018 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,018 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,018 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,019 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 2000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:34,019 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:34,101 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,102 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2132, 'member_id': 57510, 'title': '加标', 'amount': 2000000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:28.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,102 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,103 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:34,103 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2132
+2020-11-15 10:39:34,103 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 4, 'title': '前置条件-审核通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":2132,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,103 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,103 apitest INFO handle_requests.py [第13行] 请求方法为：patch
+2020-11-15 10:39:34,103 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,103 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'loan_id': 2132, 'approved_or_not': True}
+2020-11-15 10:39:34,104 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/audit
+2020-11-15 10:39:34,175 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,175 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,176 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,176 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:34,176 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:34,176 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 5, 'title': '前置条件-用户充值', 'method': 'POST', 'url': 'member/recharge', 'request_data': '{"member_id":"57510","amount":"5000000.0"}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,176 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,176 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,176 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,177 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'amount': '5000000.0'}
+2020-11-15 10:39:34,177 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/recharge
+2020-11-15 10:39:34,245 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,245 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '余额必须大于0并且小于或者等于500000', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,246 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,246 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:34,246 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:34,246 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2132
+2020-11-15 10:39:34,246 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 6, 'title': '投资成功-管理员', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2132,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":0,"msg":"OK"}', 'check_sql': None}
+2020-11-15 10:39:34,246 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,246 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,247 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,247 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2132, 'amount': '2000000.0'}
+2020-11-15 10:39:34,247 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:34,346 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,346 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 423, 'member_id': 57510, 'loan_id': 2132, 'amount': 2000000.0, 'create_time': '2020-11-15 10:39:28', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,347 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 0, 'msg': 'OK', 'data': {'id': 423, 'member_id': 57510, 'loan_id': 2132, 'amount': 2000000.0, 'create_time': '2020-11-15 10:39:28', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,347 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 0, 'msg': 'OK'}
+2020-11-15 10:39:34,348 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,348 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:34,348 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:34,349 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 7, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,349 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,350 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,350 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,350 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 2000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:34,350 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:34,423 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,424 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2133, 'member_id': 57510, 'title': '加标', 'amount': 2000000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:29.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,425 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,425 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:34,425 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2133
+2020-11-15 10:39:34,425 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 8, 'title': '前置条件-审核通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":2133,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,425 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,425 apitest INFO handle_requests.py [第13行] 请求方法为：patch
+2020-11-15 10:39:34,426 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,426 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'loan_id': 2133, 'approved_or_not': True}
+2020-11-15 10:39:34,426 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/audit
+2020-11-15 10:39:34,501 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,501 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,501 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,501 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['phone']
+2020-11-15 10:39:34,740 apitest INFO handle_db.py [第28行] 查询个数0
+2020-11-15 10:39:34,741 apitest INFO handle_data.py [第95行] 如果有手机号需要未注册的，调用函数生成新的未注册过手机号,将新生成的手机号设置成Data类属性
+2020-11-15 10:39:34,742 apitest INFO handle_data.py [第99行] 替换#phone#,替换后phone值为：13167405411
+2020-11-15 10:39:34,742 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 9, 'title': '前置条件-注册普通用户', 'method': 'post', 'url': 'member/register', 'request_data': '{"mobile_phone":"13167405411","pwd":"123456789","type":1,"reg_name":"qianyu"}', 'extract': '{"user":"$..mobile_phone"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,742 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,742 apitest INFO handle_requests.py [第13行] 请求方法为：post
+2020-11-15 10:39:34,742 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,743 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'mobile_phone': '13167405411', 'pwd': '123456789', 'type': 1, 'reg_name': 'qianyu'}
+2020-11-15 10:39:34,743 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/register
+2020-11-15 10:39:34,854 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,855 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57511, 'reg_name': 'qianyu', 'mobile_phone': '13167405411'}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,856 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,856 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['admin']
+2020-11-15 10:39:34,856 apitest INFO handle_data.py [第99行] 替换#admin#,替换后admin值为：17714071496
+2020-11-15 10:39:34,856 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 10, 'title': '前置条件-登录', 'method': 'POST', 'url': 'member/login', 'request_data': '{"mobile_phone":"17714071496","pwd":"123456789"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,856 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,856 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,856 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjh9.k21QKXW2PRBmOuWhph2NxOg8gRx8ayhvzXBTwjY-bT_BgJ_psKLh-05mATDC2vV0LQhQWpy5oMJfNio-av15_g'}
+2020-11-15 10:39:34,857 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'mobile_phone': '17714071496', 'pwd': '123456789'}
+2020-11-15 10:39:34,857 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/login
+2020-11-15 10:39:34,962 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:34,963 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -2000000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-11-15 10:44:29', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:34,964 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:34,964 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:34,964 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:34,964 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 11, 'title': '前置条件-用户充值', 'method': 'POST', 'url': 'member/recharge', 'request_data': '{"member_id":"57510","amount":"500000.0"}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:34,965 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:34,965 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:34,965 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:34,965 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'amount': '500000.0'}
+2020-11-15 10:39:34,965 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/recharge
+2020-11-15 10:39:35,040 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,041 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -1500000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,042 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,042 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:35,042 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,042 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2133
+2020-11-15 10:39:35,043 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 12, 'title': '投资成功-普通用户', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2133,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":0,"msg":"OK"}', 'check_sql': None}
+2020-11-15 10:39:35,043 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,043 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,043 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:35,043 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2133, 'amount': '2000000.0'}
+2020-11-15 10:39:35,043 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:35,140 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,140 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 424, 'member_id': 57510, 'loan_id': 2133, 'amount': 2000000.0, 'create_time': '2020-11-15 10:39:29', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,140 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 0, 'msg': 'OK', 'data': {'id': 424, 'member_id': 57510, 'loan_id': 2133, 'amount': 2000000.0, 'create_time': '2020-11-15 10:39:29', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,140 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 0, 'msg': 'OK'}
+2020-11-15 10:39:35,141 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,141 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,141 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,141 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 13, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,141 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,141 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,141 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:35,141 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 2000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:35,141 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:35,217 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,217 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2134, 'member_id': 57510, 'title': '加标', 'amount': 2000000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:29.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,218 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,219 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,219 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,219 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 14, 'title': '前置条件-用户充值', 'method': 'POST', 'url': 'member/recharge', 'request_data': '{"member_id":"57510","amount":"500000.0"}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,219 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,219 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,219 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:35,219 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'amount': '500000.0'}
+2020-11-15 10:39:35,220 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/recharge
+2020-11-15 10:39:35,308 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,309 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -3000000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,310 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,310 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:35,310 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,310 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2134
+2020-11-15 10:39:35,311 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 15, 'title': '投资失败-项目未审批', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2134,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":2,"msg":"该项目不在竞标中状态"}', 'check_sql': None}
+2020-11-15 10:39:35,311 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,311 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,311 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:35,311 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2134, 'amount': '2000000.0'}
+2020-11-15 10:39:35,311 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:35,382 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,382 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,382 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,383 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '该项目不在竞标中状态'}
+2020-11-15 10:39:35,384 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,384 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['admin']
+2020-11-15 10:39:35,384 apitest INFO handle_data.py [第99行] 替换#admin#,替换后admin值为：17714071496
+2020-11-15 10:39:35,384 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 16, 'title': '前置条件-登录', 'method': 'POST', 'url': 'member/login', 'request_data': '{"mobile_phone":"17714071496","pwd":"123456789"}', 'extract': '{"member_id":"$..id","token":"$..token"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,384 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,384 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,385 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNjl9.XFdYXOL7BH4cZFtz-uAdDnQQ_YWZtnaXh7BggAM4eqCzupakBYm-QRQbooFWo0et25mukqBhfkH0qTojsBkIQQ'}
+2020-11-15 10:39:35,385 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'mobile_phone': '17714071496', 'pwd': '123456789'}
+2020-11-15 10:39:35,385 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/login
+2020-11-15 10:39:35,486 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,487 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -3000000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0, 'token_info': {'token_type': 'Bearer', 'expires_in': '2020-11-15 10:44:30', 'token': 'eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,488 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,488 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,488 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,488 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 17, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":2000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,488 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,488 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,488 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,488 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 2000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:35,490 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:35,587 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,588 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2135, 'member_id': 57510, 'title': '加标', 'amount': 2000000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:30.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,589 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,589 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:35,589 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2135
+2020-11-15 10:39:35,589 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 18, 'title': '前置条件-审核不通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":2135,"approved_or_not":false}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,589 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,589 apitest INFO handle_requests.py [第13行] 请求方法为：patch
+2020-11-15 10:39:35,589 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,589 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'loan_id': 2135, 'approved_or_not': False}
+2020-11-15 10:39:35,591 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/audit
+2020-11-15 10:39:35,667 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,667 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,668 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,668 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,668 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,668 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 19, 'title': '前置条件-用户充值', 'method': 'POST', 'url': 'member/recharge', 'request_data': '{"member_id":"57510","amount":"500000.0"}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,669 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,669 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,669 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,669 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'amount': '500000.0'}
+2020-11-15 10:39:35,669 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/recharge
+2020-11-15 10:39:35,751 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,751 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -2500000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,752 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,752 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:35,752 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,752 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2135
+2020-11-15 10:39:35,752 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 20, 'title': '投资失败-项目审批不通过', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2135,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":2,"msg":"该项目不在竞标中状态"}', 'check_sql': None}
+2020-11-15 10:39:35,752 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,753 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,753 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,753 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2135, 'amount': '2000000.0'}
+2020-11-15 10:39:35,753 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:35,822 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,822 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,823 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '该项目不在竞标中状态', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,823 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '该项目不在竞标中状态'}
+2020-11-15 10:39:35,823 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,824 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,824 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,824 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 21, 'title': '投资失败-项目不存在', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":99999999,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":2,"msg":"项目不存在"}', 'check_sql': None}
+2020-11-15 10:39:35,824 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,824 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,824 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,824 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 99999999, 'amount': '2000000.0'}
+2020-11-15 10:39:35,824 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:35,896 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,896 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '项目不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,896 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '项目不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,896 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '项目不存在'}
+2020-11-15 10:39:35,897 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,897 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:35,897 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2135
+2020-11-15 10:39:35,897 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 22, 'title': '投资失败-用户id为空', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":null,"loan_id":2135,"amount":"2000000.0"}', 'extract': None, 'expected': '{"code":1,"msg":"会员id为空"}', 'check_sql': None}
+2020-11-15 10:39:35,897 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,897 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,897 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,898 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': None, 'loan_id': 2135, 'amount': '2000000.0'}
+2020-11-15 10:39:35,898 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:35,972 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:35,973 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,973 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 1, 'msg': '会员id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:35,973 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 1, 'msg': '会员id为空'}
+2020-11-15 10:39:35,974 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:35,974 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:35,974 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:35,974 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 23, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":200000000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:35,974 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:35,975 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:35,975 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:35,975 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 200000000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:35,975 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:36,047 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,048 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2136, 'member_id': 57510, 'title': '加标', 'amount': 200000000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:30.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,049 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,050 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:36,050 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2136
+2020-11-15 10:39:36,050 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 24, 'title': '前置条件-审核通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":2136,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:36,050 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,050 apitest INFO handle_requests.py [第13行] 请求方法为：patch
+2020-11-15 10:39:36,050 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,050 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'loan_id': 2136, 'approved_or_not': True}
+2020-11-15 10:39:36,050 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/audit
+2020-11-15 10:39:36,130 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,130 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,131 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,131 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:36,131 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,131 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2136
+2020-11-15 10:39:36,132 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 25, 'title': '投资失败-用户余额不足', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2136,"amount":"200000000.0"}', 'extract': None, 'expected': '{"code":1,"msg":"会员余额不足"}', 'check_sql': None}
+2020-11-15 10:39:36,132 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,132 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,132 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,132 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2136, 'amount': '200000000.0'}
+2020-11-15 10:39:36,132 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,235 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,235 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 425, 'member_id': 57510, 'loan_id': 2136, 'amount': 200000000.0, 'create_time': '2020-11-15 10:39:30', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,236 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 0, 'msg': 'OK', 'data': {'id': 425, 'member_id': 57510, 'loan_id': 2136, 'amount': 200000000.0, 'create_time': '2020-11-15 10:39:30', 'is_valid': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,236 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 1, 'msg': '会员余额不足'}
+2020-11-15 10:39:36,236 apitest ERROR test_invest_api.py [第53行] 断言失败！
+Traceback (most recent call last):
+  File "D:\clhtest\pythonProject\api_test\testCases\test_invest_api.py", line 50, in test_audit_api
+    assert actual["code"] == expected["code"]
+AssertionError
+2020-11-15 10:39:36,240 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,241 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:36,241 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2136
+2020-11-15 10:39:36,241 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 26, 'title': '投资失败-用户不存在', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":9999999,"loan_id":2136,"amount":"200000000.0"}', 'extract': None, 'expected': "{'code': 2, 'msg': '会员不存在'}", 'check_sql': None}
+2020-11-15 10:39:36,241 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,241 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,242 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,242 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': 9999999, 'loan_id': 2136, 'amount': '200000000.0'}
+2020-11-15 10:39:36,242 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,312 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,313 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '会员不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,313 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '会员不存在', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,313 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '会员不存在'}
+2020-11-15 10:39:36,313 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,314 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:36,314 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,314 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 27, 'title': '前置条件-加标', 'method': 'POST', 'url': 'loan/add', 'request_data': '{"member_id":"57510","title":"加标","amount":2000,"loan_rate":10.0,"loan_term":6,"loan_date_type":1,"bidding_days":10}', 'extract': '{"loan_id":"$..id"}', 'expected': None, 'check_sql': None}
+2020-11-15 10:39:36,314 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,314 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,314 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,314 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'title': '加标', 'amount': 2000, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 10}
+2020-11-15 10:39:36,314 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/add
+2020-11-15 10:39:36,392 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,392 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 2137, 'member_id': 57510, 'title': '加标', 'amount': 2000.0, 'loan_rate': 10.0, 'loan_term': 6, 'loan_date_type': 1, 'bidding_days': 5, 'create_time': '2020-11-15 10:39:30.0', 'bidding_start_time': None, 'full_time': None, 'status': 1}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,393 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,393 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:39:36,393 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2137
+2020-11-15 10:39:36,393 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 28, 'title': '前置条件-审核通过', 'method': 'patch', 'url': 'loan/audit', 'request_data': '{"loan_id":2137,"approved_or_not":true}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:36,393 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,394 apitest INFO handle_requests.py [第13行] 请求方法为：patch
+2020-11-15 10:39:36,394 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,394 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'loan_id': 2137, 'approved_or_not': True}
+2020-11-15 10:39:36,394 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/loan/audit
+2020-11-15 10:39:36,480 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,481 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,481 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,481 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:36,482 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,482 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 29, 'title': '前置条件-用户充值', 'method': 'POST', 'url': 'member/recharge', 'request_data': '{"member_id":"57510","amount":"500000.0"}', 'extract': None, 'expected': None, 'check_sql': None}
+2020-11-15 10:39:36,482 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,482 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,482 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,482 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'amount': '500000.0'}
+2020-11-15 10:39:36,483 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/recharge
+2020-11-15 10:39:36,643 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,644 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 0, 'msg': 'OK', 'data': {'id': 57510, 'leave_amount': -202000000.0, 'mobile_phone': '17714071496', 'reg_name': 'qianyu', 'reg_time': '2020-11-15 10:39:28.0', 'type': 0}, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,644 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,645 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:36,645 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,645 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2137
+2020-11-15 10:39:36,645 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 30, 'title': '投资失败-投资金额大于借款', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2137,"amount":"20000.0"}', 'extract': None, 'expected': '{"code":2,"msg":"该标可投金额不足,可投金额：2000.0"}', 'check_sql': None}
+2020-11-15 10:39:36,645 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,645 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,645 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,646 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2137, 'amount': '20000.0'}
+2020-11-15 10:39:36,646 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,725 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,725 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '该标可投金额不足,可投金额：2000.0', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,726 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '该标可投金额不足,可投金额：2000.0', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,726 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '该标可投金额不足,可投金额：2000.0'}
+2020-11-15 10:39:36,727 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,727 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:36,728 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,728 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 31, 'title': '投资失败-标id为空', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":null,"amount":"200.0"}', 'extract': None, 'expected': '{"code":1,"msg":"项目id为空"}', 'check_sql': None}
+2020-11-15 10:39:36,728 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,728 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,728 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,728 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': None, 'amount': '200.0'}
+2020-11-15 10:39:36,728 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,794 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,795 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 1, 'msg': '项目id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,795 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 1, 'msg': '项目id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,795 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 1, 'msg': '项目id为空'}
+2020-11-15 10:39:36,796 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,796 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:36,796 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,796 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 32, 'title': '投资失败-投资金额为空', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":null,"amount":null}', 'extract': None, 'expected': '{"code":1,"msg":"余额为空"}', 'check_sql': None}
+2020-11-15 10:39:36,796 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,796 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,796 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,796 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': None, 'amount': None}
+2020-11-15 10:39:36,797 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,862 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,862 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 1, 'msg': '项目id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,862 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 1, 'msg': '项目id为空', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,862 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 1, 'msg': '余额为空'}
+2020-11-15 10:39:36,863 apitest ERROR test_invest_api.py [第53行] 断言失败！
+Traceback (most recent call last):
+  File "D:\clhtest\pythonProject\api_test\testCases\test_invest_api.py", line 51, in test_audit_api
+    assert actual["msg"] == expected["msg"]
+AssertionError
+2020-11-15 10:39:36,865 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,865 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:39:36,865 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,865 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 33, 'title': '投资失败-标id为非数字', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":"a","amount":"200.0"}', 'extract': None, 'expected': '{"code":2,"msg":"数值参数格式错误"}', 'check_sql': None}
+2020-11-15 10:39:36,866 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,866 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,866 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,866 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 'a', 'amount': '200.0'}
+2020-11-15 10:39:36,866 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:36,943 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:36,943 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,943 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:36,943 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '数值参数格式错误'}
+2020-11-15 10:39:36,944 apitest INFO test_invest_api.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:39:36,945 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
+2020-11-15 10:39:36,945 apitest INFO handle_data.py [第99行] 替换#member_id#,替换后member_id值为：57510
+2020-11-15 10:39:36,945 apitest INFO handle_data.py [第99行] 替换#loan_id#,替换后loan_id值为：2137
+2020-11-15 10:39:36,945 apitest INFO handle_data.py [第100行] 替换后用例为：
+ {'id': 34, 'title': '投资失败-投资金额非数字', 'method': 'POST', 'url': 'member/invest', 'request_data': '{"member_id":"57510","loan_id":2137,"amount":"aa"}', 'extract': None, 'expected': '{"code":2,"msg":"数值参数格式错误"}', 'check_sql': None}
+2020-11-15 10:39:36,945 apitest INFO handle_requests.py [第12行] ==================开始发起请求============================
+2020-11-15 10:39:36,945 apitest INFO handle_requests.py [第13行] 请求方法为：POST
+2020-11-15 10:39:36,946 apitest INFO handle_requests.py [第33行] 请求头为：
+ {'X-Lemonban-Media-Type': 'lemonban.v2', 'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjU3NTEwLCJleHAiOjE2MDU0MDgyNzB9.hGBPBeDnkBFfub0WNEAv9fR7MwMy7FBx0ImcOT25lBR4yu_m5kUKYC1zZfMoLOiMDIiG-Jr8Y93sbra9BOEjxA'}
+2020-11-15 10:39:36,946 apitest INFO handle_requests.py [第40行] 请求数据为：
+ {'member_id': '57510', 'loan_id': 2137, 'amount': 'aa'}
+2020-11-15 10:39:36,946 apitest INFO handle_requests.py [第50行] 请求url为：
+ http://api.lemonban.com/futureloan/member/invest
+2020-11-15 10:39:37,032 apitest INFO handle_requests.py [第26行] 请求响应状态码：200
+2020-11-15 10:39:37,032 apitest INFO handle_requests.py [第27行] 请求响应为：
+ {'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:37,033 apitest INFO test_invest_api.py [第42行] 用例执行实际结果：{'code': 2, 'msg': '数值参数格式错误', 'data': None, 'copyright': 'Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved'}
+2020-11-15 10:39:37,033 apitest INFO test_invest_api.py [第44行] 用例预期结果：{'code': 2, 'msg': '数值参数格式错误'}

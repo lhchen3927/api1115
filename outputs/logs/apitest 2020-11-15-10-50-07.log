@@ -1,0 +1,34 @@
+2020-11-15 10:50:07,201 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:07,201 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['phone']
+2020-11-15 10:50:18,242 apitest ERROR handle_db.py [第20行] 数据库连接失败，请检查！
+Traceback (most recent call last):
+  File "D:\Python38\lib\site-packages\pymysql\connections.py", line 569, in connect
+    sock = socket.create_connection(
+  File "D:\Python38\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "D:\Python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\clhtest\pythonProject\api_test\common\handle_db.py", line 10, in __init__
+    self.conn = pymysql.connect(host=conf.get("mysql", "host"),
+  File "D:\Python38\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python38\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "D:\Python38\lib\site-packages\pymysql\connections.py", line 619, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on 'api.lemonban.com' ([Errno 11001] getaddrinfo failed)")
+2020-11-15 10:50:18,250 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:18,250 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['admin']
+2020-11-15 10:50:18,255 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:18,256 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:50:18,258 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:18,258 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['loan_id']
+2020-11-15 10:50:18,261 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:18,261 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id']
+2020-11-15 10:50:18,263 apitest INFO test_business_flow.py [第24行] #################开始执行投资接口#######################
+2020-11-15 10:50:18,263 apitest INFO handle_data.py [第89行] 用例中提取到的正则结果['member_id', 'loan_id']
